@@ -1,0 +1,132 @@
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #444;
+}
+
+.wrapper {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.wrapper .loader {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	margin: -30px;
+	border: 4px solid transparent;
+	border-top: 4px solid #24ecff;
+	animation:  animate 4s linear infinite;
+}
+
+@keyframes animate {
+	0% {
+		transform:  rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.wrapper .loader:nth-child(3) {
+	position: absolute;
+	top: -66.66px;
+}
+
+.wrapper .loader::before {
+	content:  '';
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background: #24ecff;
+	top: 12px;
+	right: 12px;
+	border-radius: 50%;
+	box-shadow: 0 0 0 5px #24ecff33,
+	0 0 0 10px #24ecff22,
+	0 0 0 15px #24ecff11,
+	0 0 20px #24ecff,
+	0 0 50px #24ecff;
+}
+
+.wrapper p {
+	position: absolute;
+	color: #fff;
+	font-size: 32px;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	bottom: -120px;
+	letter-spacing: 5px;
+}
+
+.wrapper .loader:nth-child(2) {
+	animation:  animation 4s linear infinite;
+	animation-delay:  -1s;
+	border-top: 4px solid transparent;
+	border-left: 4px solid #93ff2d;
+}
+
+.wrapper .loader:nth-child(2)::before {
+	content:  '';
+	position: absolute;
+	top:  initial;
+	bottom: 12px;
+	width: 15px;
+	height: 15px;
+	background: #93ff3d;
+	left: 12px;
+	border-radius: 50%;
+	box-shadow: 0 0 0 5px #93ff2d33,
+	0 0 0 10px #93ff2d22,
+	0 0 0 15px #93ff2d11,
+	0 0 20px #93ff2d,
+	0 0 50px #93ff2d;
+}
+
+@keyframes animation {
+	0% {
+		transform:  rotate(360deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+
+
+.wrapper .loader:nth-child(3) {
+	animation:  animation 4s linear infinite;
+	animation-delay:  -3s;
+	position: absolute;
+	top: -66.66px;
+	border-top: 4px solid transparent;
+	border-left: 4px solid #FffA28;
+}
+
+.wrapper .loader:nth-child(3)::before {
+	content:  '';
+	position: absolute;
+	top:  initial;
+	bottom: 12px;
+	width: 15px;
+	height: 15px;
+	background: #FffA28;
+	left: 12px;
+	border-radius: 50%;
+	box-shadow: 0 0 0 5px #Fffe5555,
+	0 0 0 10px #Fffe2222,
+	0 0 0 15px #Fffe1111,
+	0 0 20px #FffA28,
+	0 0 50px #FffA28;
+}
